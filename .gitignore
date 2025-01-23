@@ -1,0 +1,7 @@
+**/ny_taxi_postgres_data/*
+.ipynb_checkpoints/
+google_cloud_keys.json
+*.tfstate
+*.tfstate.*
+**.terraform
+**.terraform.lock.*
