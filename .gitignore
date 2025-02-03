@@ -8,3 +8,8 @@ google_cloud_keys.json
 *.csv*
 *.gz*
 output.csv.gz
+google_credentials.json
+.env
+**/__pycache__/*
+**/logs/*
+__pycache__/
