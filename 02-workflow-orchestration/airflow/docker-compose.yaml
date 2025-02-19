@@ -79,16 +79,21 @@ x-airflow-common:
     AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: 'google-cloud-platform://?extra__google_cloud_platform__key_path=/.google/credentials/google_credentials.json'
     GCP_PROJECT_ID: 'terraform-project-448518'
     GCP_GCS_BUCKET: 'terraform-project-448518-terra-bucket'
+    PG_HOST: "${PG_HOST}"
+    PG_USER: "${PG_USER}"
+    PG_PASSWORD: "${PG_PASSWORD}"
+    PG_PORT: "${PG_PORT}"
+    PG_DATABASE: "${PG_DATABASE}"
 
     # The following line can be used to set a custom config file, stored in the local config folder
     # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
   volumes:
-    - C:/Users/augus/OneDrive/Documentos/datatalks-zoomcamp/02-workflow-orchestration/airflow/dags:/opt/airflow/dags
-    - C:/Users/augus/OneDrive/Documentos/datatalks-zoomcamp/02-workflow-orchestration/airflow/logs:/opt/airflow/logs
-    - C:/Users/augus/OneDrive/Documentos/datatalks-zoomcamp/02-workflow-orchestration/airflow/plugins:/opt/airflow/plugins
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./plugins:/opt/airflow/plugins
     - ~/.google/credentials/:/.google/credentials:ro
-    - C:/Users/augus/OneDrive/Documentos/datatalks-zoomcamp/02-workflow-orchestration/airflow/scripts:/opt/airflow/scripts
+    - ./scripts:/opt/airflow/scripts
 
 
   user: "${AIRFLOW_UID:-50000}:0"
