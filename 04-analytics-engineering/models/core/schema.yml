@@ -6,6 +6,23 @@ models:
     description: >
       List of unique zones idefied by locationid. 
       Includes the service zone they correspond to (Green or yellow).
+    columns:
+      - name: locationid
+        data_type: int64
+        description: ""
+
+      - name: borough
+        data_type: string
+        description: ""
+
+      - name: zone
+        data_type: string
+        description: ""
+
+      - name: service_zone
+        data_type: string
+        description: ""
+
 
   - name: dm_monthly_zone_revenue
     description: >
@@ -122,24 +139,5 @@ models:
         description: ""
 
       - name: payment_type_description
-        data_type: string
-        description: ""
-
-  - name: dim_zones
-    description: ""
-    columns:
-      - name: locationid
-        data_type: int64
-        description: ""
-
-      - name: borough
-        data_type: string
-        description: ""
-
-      - name: zone
-        data_type: string
-        description: ""
-
-      - name: service_zone
         data_type: string
         description: ""
