@@ -5,7 +5,6 @@ google_cloud_keys.json
 *.tfstate.*
 **.terraform
 **.terraform.lock.*
-*.csv*
 *.gz*
 output.csv.gz
 google_credentials.json
